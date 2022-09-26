@@ -3,6 +3,7 @@
 import pygame
 from sprite import *
 from resourse import *
+from player import *
 from config import *
 import sys
 import random
@@ -19,9 +20,12 @@ class Game:
         self.running = True
 
         self.character_spritesheet = Spritesheet("source/anim/hero_anim.png")
+        self.base_attack_spritesheet = Spritesheet("source/base_attack.png")
+
         self.block_spritesheet = Spritesheet('source/block.png')
         self.resourse_sprite_sheet = Spritesheet('source/resourses.png')
         self.terrain_spritesheet = Spritesheet('source/tile_grass.png')
+        
 
     
     def scale_pos(self,n):
@@ -34,6 +38,7 @@ class Game:
                 if colum == "B":
                     Block(self,self.scale_pos(j), self.scale_pos(i))
                 if colum == "P":
+                    Tree(self,self.scale_pos(j+2), self.scale_pos(i+2))
                     Tree(self,self.scale_pos(j+2), self.scale_pos(i+2))
                     self.player = Player(self,self.scale_pos(j), self.scale_pos(i))
         for i in range(50):
