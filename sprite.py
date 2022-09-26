@@ -116,19 +116,25 @@ class Player(pygame.sprite.Sprite):
             if hits:
                 print(f'X - self {self.rect.y}\n X - sprite {hits[0].rect.y}')
                 if self.rect.y < hits[0].rect.y:
-                    layered_group.change_layer(self.game.player,3)
+                    for spr in hits:
+                        self.game.resourses.change_layer(spr,PLAYER_LAYER-1)
+                        
                     print("layer 3")
                 else:
-                    layered_group.change_layer(self.game.player,5)
+                    for spr in hits:
+                        self.game.resourses.change_layer(spr,PLAYER_LAYER+1)
                     print("layer 5")
-                layered_group.update()
+                self.game.resourses.update()
         if direction == "y":
             hits = pygame.sprite.spritecollide(self,self.game.resourses,False)
             if hits:
                 if self.rect.y < hits[0].rect.y:
-                    self._layer = 3
+                    for spr in hits:
+                        self.game.resourses.change_layer(spr,PLAYER_LAYER-1)
                 else:
-                    self._layer = 5
+                    for spr in hits:
+                        self.game.resourses.change_layer(spr,PLAYER_LAYER+1)
+                self.game.resourses.update()
             
 
     def collide_blocks(self,direction):
