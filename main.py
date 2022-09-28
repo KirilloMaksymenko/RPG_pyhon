@@ -2,6 +2,7 @@
 
 import pygame
 from sprite import *
+from terrains import *
 from resourse import *
 from player import *
 from config import *
@@ -18,15 +19,27 @@ class Game:
         self.clock = pygame.time.Clock()
         
         self.running = True
+        self.sprites_sheets()
 
+        
+        
+    def sprites_sheets(self):
         self.character_spritesheet = Spritesheet("source/anim/hero_anim.png")
-        self.base_attack_spritesheet = Spritesheet("source/base_attack.png")
+        self.target_spritesheet = Spritesheet("source/anim/target.png")
+
+        self.base_attack_spritesheet = Spritesheet("source/anim/base_attack.png")
 
         self.block_spritesheet = Spritesheet('source/block.png')
         self.resourse_sprite_sheet = Spritesheet('source/resourses.png')
         self.terrain_spritesheet = Spritesheet('source/tile_grass.png')
-        
 
+    def layers_create(self):
+        self.all_sprites = pygame.sprite.LayeredUpdates()
+
+        self.blocks = pygame.sprite.LayeredUpdates()
+        self.objects = pygame.sprite.LayeredUpdates()
+
+        self.attacks_layer = pygame.sprite.LayeredUpdates()
     
     def scale_pos(self,n):
         return n+n*3
@@ -38,8 +51,10 @@ class Game:
                 if colum == "B":
                     Block(self,self.scale_pos(j), self.scale_pos(i))
                 if colum == "P":
-                    Tree(self,self.scale_pos(j+2), self.scale_pos(i+2))
-                    Tree(self,self.scale_pos(j+2), self.scale_pos(i+2))
+                    self.attack = Attacks(self,0,0)
+                    self.target = Target(self,self.scale_pos(j-4),self.scale_pos(i-4))
+                    self.target = Target(self,self.scale_pos(j-6),self.scale_pos(i-4))
+                    self.target = Target(self,self.scale_pos(j-8),self.scale_pos(i-4))
                     self.player = Player(self,self.scale_pos(j), self.scale_pos(i))
         for i in range(50):
             Tree(self,self.scale_pos(random.randint(0,50)),self.scale_pos(random.randint(0,50)))
@@ -50,10 +65,7 @@ class Game:
 
         self.playing = True
 
-        self.all_sprites = pygame.sprite.LayeredUpdates()
-        self.blocks = pygame.sprite.LayeredUpdates()
-        self.resourses = pygame.sprite.LayeredUpdates()
-        self.attacks = pygame.sprite.LayeredUpdates()
+        self.layers_create()
 
         self.createTilemap()
 
@@ -65,12 +77,7 @@ class Game:
 
     def update(self):
         self.all_sprites.update()
-        
-        
-        
-       
-        
-    
+
     def draw(self):
         self.screen.fill(BLACK)
         self.all_sprites.draw(self.screen)

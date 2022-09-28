@@ -12,7 +12,7 @@ class Tree(pygame.sprite.Sprite):
 
         self.game = game 
         self._layer = RESOURSE_LAYER
-        self.groups = self.game.all_sprites,self.game.resourses
+        self.groups = self.game.all_sprites,self.game.objects
         pygame.sprite.Sprite.__init__(self,self.groups)
 
         self.x = x * TILESIZE
