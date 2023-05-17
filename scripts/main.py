@@ -7,6 +7,7 @@ from main_finctions import *
 
 from map_scene.map_player import *
 from platformer_scene.platformer_player import *
+from quests.chapitre_1.quests import *
 from config import *
 import sys
 import random
@@ -42,9 +43,33 @@ class Game:
         self.platformer_solid= pygame.sprite.LayeredUpdates()
         self.platformer_npc= pygame.sprite.LayeredUpdates()
         self.platformer_ui= pygame.sprite.LayeredUpdates()
+        self.platformer_point= pygame.sprite.LayeredUpdates()
 
         #self.character_spritesheet = Spritesheet("source/anim/hero_anim.png")
         self.map_spritesheet = SpritesheetMap("source/Map_V2.png")
+        self.avatar_npc = {
+            "dlg_pn_1":SpritesheetMap("source/dialoge_1.png"),
+            "dlg_pn_2":SpritesheetMap("source/dialoge_2.png"),
+            "main":SpritesheetMap("source/main_hero.png"),
+            "Noname":SpritesheetMap("source/Noname.png"),
+            "Seller":SpritesheetMap("source/Seller.png"),
+            "Dr.Miller":SpritesheetMap("source/Dr.Miller.png"),
+            "Zina":SpritesheetMap("source/Zina.png"),
+            "Vasya":SpritesheetMap("source/Vasya.png"),
+            "robot":SpritesheetMap("source/robot.png"),
+        }
+        self.bg_map = {
+            "3":SpritesheetMap("source/point_3.png"),
+            "15":SpritesheetMap("source/point_15.png"),
+            "26":SpritesheetMap("source/point_26.png"),
+            "38":SpritesheetMap("source/point_38.png"),
+            "45":SpritesheetMap("source/point_45.png"),
+            "59":SpritesheetMap("source/point_59.png"),
+            "88":SpritesheetMap("source/point_88.png"),
+            "72":SpritesheetMap("source/point_72.png"),
+            
+        }
+            
     
     def map_layers_draw(self):
         self.map_sprites.draw(self.screen)
@@ -60,12 +85,23 @@ class Game:
 
         self.layers_create()
      
-        self.map = MapSceneSetup(self)
-        self.platformer = PlatformerSceneSetup(self)
+        self.player_data = load_json_m("scripts/player_data.json")
+        self.player_data["scene"] = "map"
+        write_json_m("scripts/player_data.json",self.player_data)
 
         self._isMap = True
 
+        self.map = MapSceneSetup(self)
+        self.platformer = PlatformerSceneSetup(self)
+        self.quest_sys = QuestSys(self)
 
+    def new_game(self):
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_n]:
+            plr = load_json_m("scripts/player_data_stoc.json")
+            write_json_m("scripts/player_data.json",plr)
+            npc = load_json_m("scripts\map_scene\json\data_npc_stoc.json")
+            write_json_m("scripts\map_scene\json\data_npc.json",npc)
 
     def events(self):
         for event in pygame.event.get():
@@ -74,6 +110,7 @@ class Game:
                 self.running = False
 
     def update(self):
+        self.new_game( )
         self.player_data = load_json_m("scripts/player_data.json")
         self.scene = self.player_data["scene"]
         
@@ -97,14 +134,15 @@ class Game:
 
     def draw(self):
         
-        
         if self.scene == "map":
+            
             self.screen.fill(WHITE)
             self.map_layers_draw()
             
         if self.scene == "platformer":
-            self.screen.fill(BLACK)
+            self.screen.fill((33,30,34))
             self.platformer_layers_draw()
+            
             
         
         

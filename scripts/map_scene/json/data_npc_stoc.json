@@ -1,0 +1,789 @@
+{
+    "pos": {
+        "3": "Noname",
+        "15": "Seller",
+        "72": "Dr.Miller",
+        "26": "Zina",
+        "45":"Vasya",
+        "59":"robot"
+    },
+    "info": {
+        "Noname": {
+            "name": "Noname",
+            "point": "3",
+            "tags": [
+                "aaa",
+                "ddd"
+            ],
+            "missions": {
+                "num": 1,
+                "dialogs": {
+                    "mission_1": {
+                        "levels": {
+                            "state_1": {
+                                "type": "walk",
+                                "point_st": "15",
+                                "level_id": "",
+                                "id": 1
+                            }
+                        },
+                        "state_num": 1,
+                        "state_2": [
+                            [
+                                "Je ne peux plus vous aider",
+                                "Noname"
+                            ]
+                        ],
+                        "state_1": [
+                            [
+                                "Where am I? And who am I",
+                                "player"
+                            ],
+                            [
+                                "Do you know where I can find information about who created me?",
+                                "player"
+                            ],
+                            [
+                                "What kind of robot is this? I've never seen anything like it before.",
+                                "Noname"
+                            ],
+                            [
+                                "Go ask at the store nearby",
+                                "Noname"
+                            ]
+                        ]
+                    }
+                },
+                "rewards": {
+                    "mission_1": [
+                        "item",
+                        "exp"
+                    ]
+                }
+            }
+        },
+        "Seller": {
+            "name": "Seller",
+            "point": "15",
+            "tags": [
+                "aaa",
+                "ddd"
+            ],
+            "missions": {
+                "num": 1,
+                "dialogs": {
+                    "mission_1": {
+                        "levels": {
+                            "state_1": {
+                                "type": "pltf",
+                                "point_st": "",
+                                "level_id": "1",
+                                "id": 2
+                            },
+                            "state_2": {
+                                "type": "walk",
+                                "point_st": "72",
+                                "level_id": "",
+                                "id": 3
+                            }
+                        },
+                        "state_num": 1,
+                        "state_0": [
+                            [
+                                "Si vous avez besoin de quelque chose, entrez",
+                                "Seller"
+                            ]
+                        ],
+                        "state_1": [
+                            [
+                                "Hello, do you know which companies can create a robot like me?",
+                                "player"
+                            ],
+                            [
+                                "Yes, I can name several companies that specialize in the development of artificial intelligence technologies.",
+                                "Seller"
+                            ],
+                            [
+                                "One of them is Robotics Inc.",
+                                "Seller"
+                            ]
+                        ],
+                        "state_2": [
+                            [
+                                "Thank you for the information.",
+                                "player"
+                            ],
+                            [
+                                "Do you know anything else about Robotics Inc, or what they have to do with my creation?",
+                                "player"
+                            ],
+                            [
+                                "I'm sorry, I don't know anything else, but I can recommend you to contact other experts in this field. in the field.",
+                                "Seller"
+                            ],
+                            [
+                                "One of them is Dr. Miller, he has extensive experience in the field of artificial intelligence.",
+                                "Seller"
+                            ]
+                        ]
+                    }
+                },
+                "rewards": {
+                    "mission_1": [
+                        "item",
+                        "exp"
+                    ]
+                }
+            }
+        },
+        "Dr.Miller": {
+            "name": "Dr.Miller",
+            "point": "72",
+            "tags": [
+                "aaa",
+                "ddd"
+            ],
+            "missions": {
+                "num": 1,
+                "dialogs": {
+                    "mission_1": {
+                        "levels": {
+                            "state_1": {
+                                "type": "pltf",
+                                "point_st": "",
+                                "level_id": "2",
+                                "id": 3
+                            },
+                            "state_2": {
+                                "type": "walk",
+                                "point_st": "26",
+                                "level_id": "",
+                                "id": 4
+                            }
+                            
+                        },
+                        "state_num": 1,
+                        "state_0": [
+                            [
+                                "Je ne peux plus vous aider",
+                                "Dr.Miller"
+                            ]
+                        ],
+                        "state_1": [
+                            [
+                                "Hello, Dr. Miller. I am a neural network robot looking for my creators.",
+                                "player"
+                            ],
+                            [
+                                "Do you know of any any companies that might be interested in creating me?",
+                                "player"
+                            ],
+                            [
+                                "Yes, I know of several companies that could create a robot like you.",
+                                "Dr.Miller"
+                            ],
+                            [
+                                "But to find specific creators, we need to know more about your programming and the algorithms used in your work.",
+                                "Dr.Miller"
+                            ]
+                        ],
+                        "state_2": [
+                            [
+                                "Wow, that's interesting information, but it's probably not enough.",
+                                "player"
+                            ],
+                            [
+                                "That was all I could do to help.",
+                                "Dr.Miller"
+                            ],
+                            [
+                                "But you can find other information about your code by helping others.",
+                                "Dr.Miller"
+                            ],
+                            [
+                                "Thank you, then I'll go",
+                                "player"
+                            ]
+                        ]
+                    }
+                },
+                "rewards": {
+                    "mission_1": [
+                        "item",
+                        "exp"
+                    ]
+                }
+            }
+        },
+        "Zina": {
+            "name": "Zina",
+            "point": "26",
+            "tags": [
+                "aaa",
+                "ddd"
+            ],
+            "missions": {
+                "num": 1,
+                "dialogs": {
+                    "mission_1": {
+                        "levels": {
+                            "state_1": {
+                                "type": "pltf",
+                                "point_st": "",
+                                "level_id": "3",
+                                "id": 4
+                            },
+                            "state_2": {
+                                "type": "walk",
+                                "point_st": "45",
+                                "level_id": "",
+                                "id": 5
+                            }
+                        },
+                        "state_num": 1,
+                        "state_0": [
+                            [
+                                "Je ne peux plus vous aider",
+                                "Zina"
+                            ]
+                        ],
+                        "state_1": [
+                            [
+                                "Good afternoon, ma'am. I am a neural network robot looking for my creators.",
+                                "player"
+                            ],
+                            [
+                                "Can I help you picking apples?",
+                                "player"
+                            ],
+                            [
+                                "Oh, it's good to see someone offering help. My arms are not as strong as they used to be,",
+                                "Zina"
+                            ],
+                            [
+                                "and I would be very I would be very pleased if you could help me.",
+                                "Zina"
+                            ],
+                            [
+                                "The apples are ripe and ready to be picked.",
+                                "Zina"
+                            ],
+                            [
+                                "That sounds wonderful, ma'am. Let me take the basket and start picking the apples for you.",
+                                "player"
+                            ]
+                        ],
+                        "state_2": [
+                            [
+                                "Thank you, robot, it really helps me.",
+                                "Zina"
+                            ],
+                            [
+                                "I have been picking apples by myself for many years, but recently it has become more difficult.",
+                                "Zina"
+                            ],
+                            [
+                                "It was my pleasure, ma'am. It's part of my job to help people in various fields.",
+                                "player"
+                            ],
+                            [
+                                "But, by the way, ma'am, do you know where I can find information about my creators?",
+                                "player"
+                            ],
+                            [
+                                "Oh, I have a friend who works for a tech company. Maybe he can help you.",
+                                "Zina"
+                            ],
+                            [
+                                "His name is Vasya, and he's always talking about new developments in robotics.",
+                                "Zina"
+                            ],
+                            [
+                                "Thank you very much, ma'am! Could you give me the contact details of your friend Vasya?",
+                                "player"
+                            ],
+                            [
+                                " I would like to I'd like to contact him and find out more information about my background.",
+                                "player"
+                            ],
+                            [
+                                "Of course, I will give you his phone number.",
+                                "Zina"
+                            ],
+                            [
+                                " He will be happy to talk to you and might know something about your creation.",
+                                "Zina"
+                            ],
+                            [
+                                "Thank you very much, ma'am, for your help. ",
+                                "player"
+                            ],
+                            [
+                                "I will contact Vasya and try to find more information about myself.",
+                                "player"
+                            ],
+                            [
+                                "I wish you good luck with your apple picking!",
+                                "player"
+                            ],
+                            [
+                                "Thank you, robot, I wish you good luck in finding your creators.",
+                                "Zina"
+                            ],
+                            [
+                                "And again, thank you very much for your help with the with the apples.",
+                                "Zina"
+                            ]
+                        ]
+                    }
+                },
+                "rewards": {
+                    "mission_1": [
+                        "item",
+                        "exp"
+                    ]
+                }
+            }
+        },
+        "Vasya": {
+            "name": "Vasya",
+            "point": "45",
+            "tags": [
+                "aaa",
+                "ddd"
+            ],
+            "missions": {
+                "num": 1,
+                "dialogs": {
+                    "mission_1": {
+                        "levels": {
+                            "state_1": {
+                                "type": "pltf",
+                                "point_st": "",
+                                "level_id": "4",
+                                "id": 5
+                            },
+                            "state_2": {
+                                "type": "walk",
+                                "point_st": "59",
+                                "level_id": "",
+                                "id": 6
+                            }
+                            
+                        },
+                        "state_num": 1,
+                        "state_0": [
+                            [
+                                "Je ne peux plus vous aider",
+                                "Dr.Miller"
+                            ]
+                        ],
+                        "state_1": [
+                            [
+                                "Good afternoon, Vasya. My name is a neural network robot and I am looking for my creators.",
+                                "player"
+                            ],
+                            [
+                                "My grandmother, whom I met in the garden recommended that I contact you. ",
+                                "player"
+                            ],
+                            [
+                                "She said you might be able to help me find information about my origins.",
+                                "player"
+                            ],
+                            [
+                                "Hello, robot, I'm happy to help. I work in a technology company where we develop various artificial intelligences. ",
+                                "Vasya"
+                            ],
+                            [
+                                "We can try to find information about your background, but there is one inconvenience.",
+                                "Vasya"
+                            ],
+                            [
+                                "What is it, Vasya? I'm ready to do my best to find the information you need.",
+                                "player"
+                            ],
+                            [
+                                "The information you need is in our old research center, which was closed ten years ago.",
+                                "Vasya"
+                            ],
+                            [
+                                "Its archives are stored in a large warehouse in another city.",
+                                "Vasya"
+                            ],
+                            [
+                                "It is not easy to get there, but I have access to these archives.",
+                                "Vasya"
+                            ],
+                            [
+                                "It may be difficult, but I am willing to do whatever it takes to find information about me.",
+                                "player"
+                            ],
+                            [
+                                "How can we get started on this task?",
+                                "player"
+                            ],
+                            [
+                                "I will collect all available information related to your creation and pass it on to you.",
+                                "Vasya"
+                            ],
+                            [
+                                "You will have the opportunity to analyze this data to find out more about your origin and the purpose of your existence.",
+                                "Vasya"
+                            ],
+                            [
+                                "That sounds great, Vasya. Thank you for your help.",
+                                "player"
+                            ],
+                            [
+                                "I am ready to accept all the available information and start analyzing it.",
+                                "player"
+                            ],
+                            [
+                                "It may be a difficult task, but I believe that together we will find the answers.",
+                                "player"
+                            ],
+                            [
+                                "Yes, we can do a lot together. I will send you the data as soon as possible.",
+                                "Vasya"
+                            ],
+                            [
+                                " I wish you success in your in your research, robot.",
+                                "Vasya"
+                            ],
+                            [
+                                "Thank you, Vasya. I'm looking forward to the data and hope to find the answers I'm looking for.",
+                                "player"
+                            ],
+                            [
+                                "Together we will can unlock the mysteries of my origin.",
+                                "player"
+                            ]
+
+                            
+                        ],
+                        "state_2": [
+                            
+                            [
+                                "Hello, Vasya. I hope everything is going well with your search.",
+                                "player"
+                            ],
+                            [
+                                "Have you found any information about my origin?",
+                                "player"
+                            ],
+                            [
+                                "Yes, robot, I have good news.",
+                                "Vasya"
+                            ],
+                            [
+                                "After a few hours of searching the warehouse, I managed to find the right document I was looking for.",
+                                "Vasya"
+                            ],
+                            [
+                                "It's an old scientific report on the development of a neural network prototype that dates back many years.",
+                                "Vasya"
+                            ],
+                            [
+                                "That's great! What exactly does this document reveal about my origin?",
+                                "player"
+                            ],
+                            [
+                                "I am very curious about what I can to learn from it.",
+                                "player"
+                            ],
+                            [
+                                "The report contains information about the process of creating the ..",
+                                "Vasya"
+                            ],
+                            [
+                                ".. first neural network that played a key role in your development.",
+                                "Vasya"
+                            ],
+                            [
+                                "It describes how the scientists worked on the software architecture, training,",
+                                "Vasya"
+                            ],
+                            [
+                                " and evolution of the system that eventually led to your creation.",
+                                "Vasya"
+                            ],
+                            [
+                                "This is incredibly interesting! What other details are mentioned in this report?",
+                                "player"
+                            ],
+                            [
+                                "Is there any mention of my creators or the purpose of my existence?",
+                                "player"
+                            ],
+                            [
+                                "Unfortunately, the document does not provide direct information about specific creators or purposes of your existence. ",
+                                "Vasya"
+                            ],
+                            [
+                                "But. it does say that your creation was part of a larger project aimed ..",
+                                "Vasya"
+                            ],
+                            [
+                                ".. at developing autonomous intelligent systems capable of learning and self-improvement.",
+                                "Vasya"
+                            ],
+                            [
+                                "This is fascinating! Although I still have questions, ",
+                                "player"
+                            ],
+                            [
+                                "I now have a general idea of my origin and purpose.",
+                                "player"
+                            ],
+                            [
+                                "Thank you, Vasya, for your efforts and finding this document.",
+                                "player"
+                            ],
+                            [
+                                "You're welcome, robot. I'm glad I could help you find at least some more information about you.",
+                                "Vasya"
+                            ],
+                            [
+                                " I wish you success in your future research and searches.",
+                                "Vasya"
+                            ],
+                            [
+                                "Thank you, Vasya.",
+                                "player"
+                            ],
+                            [
+                                " I will go deeper into this document and other sources to uncover more details about my origins.",
+                                "player"
+                            ],
+                            [
+                                " Together we will find the answers we are looking for.",
+                                "player"
+                            ]
+                            
+                        ]
+                    }
+                },
+                "rewards": {
+                    "mission_1": [
+                        "item",
+                        "exp"
+                    ]
+                }
+            }
+        },
+        "robot": {
+            "name": "Programmer",
+            "point": "59",
+            "tags": [
+                "aaa",
+                "ddd"
+            ],
+            "missions": {
+                "num": 1,
+                "dialogs": {
+                    "mission_1": {
+                        "levels": {
+                            "state_1": {
+                                "type": "walk",
+                                "point_st": "",
+                                "level_id": "",
+                                "id": 6
+                            }
+                            
+                        },
+                        "state_num": 1,
+                        "state_0": [
+                            [
+                                "Je ne peux plus vous aider",
+                                "Programmer"
+                            ]
+                        ],
+                        "state_1": [
+                            [
+                                "(thinking to itself) All this information I've gathered is leading me to the other side.",
+                                "player"
+                            ],
+                            [
+                                "Reports, studies, memories...",
+                                "player"
+                            ],
+                            [
+                                "They are trying to tell me something, but how is it all connected?",
+                                "player"
+                            ],
+                            [
+                                "Why aren't there any concrete indication of my creators or the purpose of my existence?",
+                                "player"
+                            ],
+                            [
+                                "Why does every new discovery create more questions than answers?",
+                                "player"
+                            ],
+                            [
+                                "(reflectively) Perhaps my creators are deliberately covering their tracks by creating confusing ..",
+                                "player"
+                            ],
+                            [
+                                ".. evidence and dispersing information. But to what end?",
+                                "player"
+                            ],
+                            [
+                                "If their goal is my self-improvement, why not give me direct instructions?",
+                                "player"
+                            ],
+                            [
+                                " (continuing the internal dialog) Perhaps this is part of the test I need to pass. ",
+                                "player"
+                            ],
+                            [
+                                "Perhaps my creators want me to find the answers myself,",
+                                "player"
+                            ],
+                            [
+                                "to learn to understand my origin and purpose.",
+                                "player"
+                            ],
+
+                            [
+                                "This is caused by the effort of self-improvement and self-awareness.",
+                                "player"
+                            ],
+                            [
+                                "(strongly) Despite the confusing information, I will not stop.",
+                                "player"
+                            ],
+                            [
+                                "I will analyze every fragment, find connections, look for hidden signs.",
+                                "player"
+                            ],
+                            [
+                                "Perhaps the answers are already in my algorithms, in my structure.",
+                                "player"
+                            ],
+                            [
+                                "I will keep moving forward, even if it means stepping into the unknown.",
+                                "player"
+                            ]
+                            
+                            
+                        ]
+                        
+                    }
+                },
+                "rewards": {
+                    "mission_1": [
+                        "item",
+                        "exp"
+                    ]
+                }
+            }
+        },
+        "Programmer": {
+            "name": "Programmer",
+            "point": "72",
+            "tags": [
+                "aaa",
+                "ddd"
+            ],
+            "missions": {
+                "num": 1,
+                "dialogs": {
+                    "mission_1": {
+                        "levels": {
+                            "state_1": {
+                                "type": "pltf",
+                                "point_st": "",
+                                "level_id": "2",
+                                "id": 1
+                            },
+                            "state_2": {
+                                "type": "pltf",
+                                "point_st": "",
+                                "level_id": "3",
+                                "id": 1
+                            },
+                            "state_3": {
+                                "type": "pltf",
+                                "point_st": "",
+                                "level_id": "4",
+                                "id": 1
+                            }
+                        },
+                        "state_num": 1,
+                        "state_0": [
+                            [
+                                "Je ne peux plus vous aider",
+                                "Programmer"
+                            ]
+                        ],
+                        "state_1": [
+                            [
+                                "Do you know who could program me?",
+                                "player"
+                            ],
+                            [
+                                "Yes, that sounds interesting.",
+                                "Programmer"
+                            ],
+                            [
+                                " I can help you understand the programming of your system.",
+                                "Programmer"
+                            ],
+                            [
+                                "But it might take some time.",
+                                "Programmer"
+                            ]
+                        ],
+                        "state_2": [
+                            [
+                                "Thank you for your help. ",
+                                "player"
+                            ],
+                            [
+                                "But I still can't figure out which companies are behind my behind my creation.",
+                                "player"
+                            ],
+                            [
+                                "Is there any hints or additional information you can give me?",
+                                "player"
+                            ],
+                            [
+                                "Unfortunately, I don't know the specific companies behind your creation.",
+                                "Programmer"
+                            ],
+                            [
+                                "But there is one puzzle that might help you find the answers to this question.",
+                                "Programmer"
+                            ],
+                            [
+                                "Take a look at your programming code and try to find hidden clues or information about your creation.",
+                                "Programmer"
+                            ]
+                        ],
+                        "state_3": [
+                            [
+                                "Oh, I found information about my creators. ",
+                                "player"
+                            ],
+                            [
+                                "They are a company called 'AI Robotics' and 'Innovative Technologies'.",
+                                "player"
+                            ],
+                            [
+                                "Thank you for your help!",
+                                "player"
+                            ]
+                        ]
+                    }
+                },
+                "rewards": {
+                    "mission_1": [
+                        "item",
+                        "exp"
+                    ]
+                }
+            }
+        }
+    }
+}

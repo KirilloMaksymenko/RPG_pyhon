@@ -6,13 +6,13 @@ from platformer_scene.platformer_config import *
 from platformer_scene.platformer_sprite import *
 
 class Platform(pygame.sprite.Sprite):
-    def __init__(self,game,wight,name,x,y):
+    def __init__(self,game,surf,name,x,y):
         super().__init__()
         self.game = game
-        self.groups = self.game.platformer_solid,self.game.platformer_sprites
+        self._layer = TILE_LAYER
+        self.groups = self.game.platformer_solid,self.game.platformer_sprites,self.game.platformer_objects
         pygame.sprite.Sprite.__init__(self,self.groups)
-        self.image = pygame.Surface((wight, 20))
-        self.image.fill((255,0,0))
+        self.image = surf
         self.rect = self.image.get_rect()
         self.name = name
         self.c = 0
@@ -76,15 +76,17 @@ class pol(pygame.sprite.Sprite):
 
 
 class Item(pygame.sprite.Sprite):
-    def __init__(self,game,name,x,y):
+    def __init__(self,game,surf,name,x,y,id):
         super().__init__()
         self.game = game
+        self._layer = OBJ_LAYER
         self.groups = self.game.platformer_objects,self.game.platformer_solid,self.game.platformer_sprites
         pygame.sprite.Sprite.__init__(self,self.groups)
+        
         item_data = load_json("scripts/platformer_scene/json/рlatformer_items_info.json")[name]
+        self.id = id
         self.name = name
-        self.image = pygame.Surface((20, 20))
-        self.image.fill((item_data[0][0],item_data[0][1],item_data[0][2]))
+        self.image = surf
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y

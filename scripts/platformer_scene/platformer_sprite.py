@@ -9,12 +9,12 @@ class SpritesheetPlatformer:
         self.sheet = pygame.image.load(file).convert_alpha()
         
 
-    def get_sprite(self,x,y,width,height):
-        sprite = pygame.Surface([width,height])
+    def get_sprite(self,x,y,width,height,id):
+        sprite = pygame.Surface([44,4])
         
-        sprite.blit(self.sheet,(0,0),(x,y,width,height))
+        sprite.blit(self.sheet,(0,0),(x,y,44,44))
         sprite.set_colorkey(BLACK)
-        sprite = pygame.transform.scale(sprite, (width, height))
+        sprite = pygame.transform.scale(sprite, (44, 44))
         return sprite
 
             

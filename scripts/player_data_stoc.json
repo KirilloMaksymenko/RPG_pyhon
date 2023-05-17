@@ -1,0 +1,33 @@
+{
+    "point": "1",
+    "scene": "map",
+    "spawn_pos": [
+        135,
+        540
+    ],
+    "player_stats": {
+        "health_max": 50,
+        "health": 25,
+        "ex_max": 100,
+        "ex": 100
+    },
+    "inventory": {
+        "slots": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": []
+        },
+        "sellected": 1
+    },
+    "quests": {
+        "id": 1,
+        "name_npc": "",
+        "point_start": "",
+        "level_id": "",
+        "name_qst": "",
+        "descript": "",
+        "type_qst": "",
+        "isDone": false
+    }
+}

@@ -9,7 +9,8 @@ from platformer_scene.platformer_sprite import *
 class PlayerUI:
     def __init__(self,game):
         PlayerInventory(game)
-        PlayerStats(game)
+        #PlayerStats(game)
+        print("UI")
 
 class PlayerStats(pygame.sprite.Sprite):
     def __init__(self,game):
@@ -53,6 +54,8 @@ class PlayerInventory(pygame.sprite.Sprite):
         self.font = pygame.font.Font(None, 32)
         
         self._isVisible = False
+        self.image = pygame.Surface([210, 26])
+        self.rect = self.image.get_rect
 
         
     def draw_inv(self):
@@ -62,7 +65,9 @@ class PlayerInventory(pygame.sprite.Sprite):
             for i in range(4):
                 pygame.draw.rect(self.image, RED,pygame.Rect((i*50),0,26,26))
                 if data["slots"][str(i+1)] != []:
-                    pygame.draw.rect(self.image, (data["slots"][str(i+1)][1][0][0],data["slots"][str(i+1)][1][0][1],data["slots"][str(i+1)][1][0][2]),pygame.Rect((i*50)+3,0+3,20,20))#img
+                    #print(self.game.platformer.lvl.tmx_data.get_object_by_id(data["slots"][str(i+1)][2]))
+                    self.image.blit(self.game.platformer.lvl.tmx_data.get_object_by_id(data["slots"][str(i+1)][2]).image,pygame.Rect((i*50)+3,0+3,20,20))
+                    #pygame.draw.rect(self.image, (data["slots"][str(i+1)][1][0][0],data["slots"][str(i+1)][1][0][1],data["slots"][str(i+1)][1][0][2]),pygame.Rect((i*50)+3,0+3,20,20))#img
                 pygame.draw.rect(self.image, WHITE,pygame.Rect(((data["sellected"]-1)*50),0,26,26),1)
         
         
@@ -77,6 +82,7 @@ class PlayerInventory(pygame.sprite.Sprite):
         if press[pygame.K_i]:
             self._isVisible = not self._isVisible
             sleep(0.5)
+
     
     
 

@@ -1,0 +1,42 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "maper.tmx",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "maper.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 1102,
+                "y": 562
+            }
+        },
+        "tileset.tsx": {
+            "scaleInDock": 0.5,
+            "scaleInEditor": 3
+        }
+    },
+    "last.imagePath": "C:/Users/ordi port pharmaAmah/OneDrive/Bureau/kir/RPG_pyhon/source/tmx",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 45,
+    "map.tileWidth": 45,
+    "openFiles": [
+        "tileset.tsx",
+        "maper.tmx"
+    ],
+    "project": "py-rpg.tiled-project",
+    "recentFiles": [
+        "tileset.tsx",
+        "maper.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.spacing": 3,
+    "tileset.tileSize": {
+        "height": 45,
+        "width": 45
+    }
+}
