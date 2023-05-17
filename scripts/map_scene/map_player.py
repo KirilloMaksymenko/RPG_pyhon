@@ -119,7 +119,7 @@ class DialogeSys(pygame.sprite.Sprite):
         self.npc = self.game.avatar_npc[self.name_npc].halo_sprite(0,0,WIN_WIDTH, WIN_HEIGHT,0.7)
         self.npc_rect = self.npc.get_rect()
         self.npc_rect.x = 950
-        self.npc_rect.y = 150
+        self.npc_rect.y = 190
 
         self.backgraund_img = self.game.bg_map[self.data_npc["info"][self.name_npc]["point"]].get_sprite(0,0,WIN_WIDTH, WIN_HEIGHT,1.35)
         self.image.blit(self.backgraund_img,self.backgraund_img.get_rect())
