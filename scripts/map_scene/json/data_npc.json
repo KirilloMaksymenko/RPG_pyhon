@@ -1,0 +1,44 @@
+{    
+    "pos":{
+        "3":"Abraham"
+    },
+    "info":{
+        "Abraham":{
+            "name":"Abraham",
+            "point":"3",
+            "tags": [
+                "aaa",
+                "ddd"
+            ],
+            "missions":{
+                "num":1,
+                "dialogs":{
+                    "mission_1":{
+                        "levels":{
+                            "state_1":[310,454]
+                        },
+                        "state_num":1,
+                        "state_1":[
+                            ["Lorem 1","player"],
+                            ["Lorem 2.1","Abraham"],
+                            ["Lorem 2.2","Abraham"],
+                            ["Lorem 2.3","player"]
+                        ],
+                        "state_2":[
+                            ["Lorem 3","player"],
+                            ["Lorem 4","Abraham"]
+                        ]
+                    }
+                },
+                "rewards":{
+                    "mission_1":[
+                        "item",
+                        "exp"
+                    ]
+                }
+            
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,9 @@
+WIN_WIDTH = 1280 #1106
+WIN_HEIGHT = 620 #577
+
+FPS = 60
+
+RED = (255,0,0)
+BLUE = (0,0,255)
+BLACK = (0,0,0)
+
